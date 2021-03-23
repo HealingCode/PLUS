@@ -12,19 +12,38 @@
   </header>
 </div>
 
+<?php
+if($_GET["auth_registroUsuario"]==false)
+{
 
-<form method="POST" action="registro.php">
+  <p>Compruebe los datos</p>
 
-Nombre de usuario
-<input type="text" name="nombreUsuario">
-Contraseña
-<input type="password" name="contraseña">
-Confirma tu contraseña
-<input type="password" name="recontraseña">
+else
+{
+
+  <p>Introduce los datos para registrarte</p>
+
+}
+}
+
+?>
+
+<div>
+
+  <form method="POST" action ="\php\auth\auth_registroUsuario.php">
+
+  Nombre de usuario
+  <input type="text" name="nombreUsuario">
+  Contraseña
+  <input type="password" name="pass">
+  Confirma tu contraseña
+  <input type="password" name="repass">
 
 
 <input type="submit" name = "envioRegistro" value="Envia Formulario">
 <input type="reset"  value="Reiniciar informacion">
 </form>
+</div>
+
 
 </html>
