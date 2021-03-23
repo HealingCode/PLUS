@@ -1,0 +1,27 @@
+CREATE DATABASE PLUS;
+USE PLUS;
+
+CREATE TABLE usuario(
+
+
+)ENGINE=INNODB;
+
+CREATE TABLE sesiones(
+
+
+)ENGINE=INNODB;
+
+CREATE TABLE cursos(
+
+
+
+)ENGINE=INNODB;
+
+CREATE TABLE lista_Sesiones(
+
+)ENGINE=INNODB;
+
+CREATE TABLE lista_Inscritos(
+
+
+)ENGINE=INNODB;
