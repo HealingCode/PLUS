@@ -21,7 +21,7 @@ if(isset($_POST['envioRegistro']))
    }else{
      // El registro fue exitoso.
      // -> LLAMADA DE METODO SQL
-      header("Location:\vistas\inicio.html")
+      header("Location:php\vistas\inicio.html?a=1")
    }
  }
 
