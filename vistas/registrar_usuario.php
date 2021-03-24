@@ -13,7 +13,7 @@
   </header>
 </div>
 <?php
- if(isset($_POST['envioRegistro'])){}
+ if(isset($_POST['envioRegistro'])){
 if($_GET["auth_registroUsuario"]==false)
   {
 echo  "<p>Compruebe los datos</p>";
