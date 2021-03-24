@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="inicio_style.css">
+  <link rel="stylesheet" type="text/css" href="registrar_usuario_style.css">
 <title> Plataforma Lógica Universitaria Superior </title>
 <meta charset="UTF-8">
 </head>
@@ -16,14 +16,13 @@
 if($_GET["auth_registroUsuario"]==false)
 {
 
-  <p>Compruebe los datos</p>
+echo  "<p>Compruebe los datos</p>";
 
-else
+}else
 {
 
-  <p>Introduce los datos para registrarte</p>
+echo  "<p>Introduce los datos para registrarte</p>";
 
-}
 }
 
 ?>
