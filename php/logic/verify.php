@@ -6,7 +6,17 @@ function __construct(){
   //vacio D: como su amor por ti !!! D:
 }
 
-funcion verify_empty()
+
+function verify_repass($pass, $repass){
+
+if($pass == $repass)
+{
+  return true;
+}else{
+  return false;
+}
+
+}
 
 function verify_pass($pass){
   /*
