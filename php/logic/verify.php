@@ -32,7 +32,7 @@ function verify_pass($pass){
   $mayus = preg_match('@[A-Z]@',$pass);
   $num = preg_match('@[0-9]@',$pass);
 
-if(!$minus || !$mayus || !$num || strlen($pass) < 8 || strlen > 16)
+if(!$minus || !$mayus || !$num || strlen($pass) < 8 || strlen > 32)
 {
   return false;
 }else{
