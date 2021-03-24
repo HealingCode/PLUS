@@ -24,11 +24,27 @@ width: 100%;
     transform: translate(-50%,-50%);
     background: #60a3bc;
     text-align: center;
+    border-radius: 24px;
   }
   div h1{
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+  }
+
+  div input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
   }
 
 div input[type="text"],div input[type="password"]{
@@ -46,17 +62,25 @@ div input[type="text"],div input[type="password"]{
   transition: 0.25s;
   }
 
-div input[type="text"]:focus,div input[type="password"]:focus{
+div input[type="text"]:focus,input[type="submit"]:focus,div input[type="password"]:focus{
 width: 280px;
+border-color: #2ecc71;
 }
-
-
 
 p,h1{
 font-family:  "Montserrat", sans-serif;
 }
 
-
-
+FOOTER{
+font-family: "Lato", sans-serif;
+font-size: 12px;
+color: gray;
+text-align: center;
+background-color: #A4A4A4;
+position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
+}
 
 }

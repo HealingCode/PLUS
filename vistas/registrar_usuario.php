@@ -7,6 +7,9 @@
 </head>
 <div>
 <body>
+
+
+
 <div class="sticky">
   <header>
     <a href = ""><img src = "Logo.png"> </a>
@@ -37,9 +40,19 @@ echo  "<p>Introduce los datos para registrarte</p>";
 
 
 <input type="submit" name = "envioRegistro" value="Envia Formulario">
-<input type="reset"  value="Reiniciar informacion">
+
 </form>
 </div>
+<div>
+<footer>
+<p> Plataforma Lógica Universitaria Superior tiene como objetivo primordial el aprendizaje.</p>
+<p> Mientras usted este utilizando PLUS, usted acepta que ha leído y aceptado nuestros terminos de uso,
+  así como nuestra politica de privacidad y cookies </p>
+<p> Universidad de Guadalajara, esta pagina no es una copia literal de coursera y lectortmo, lo juramos. </p>
+</footer>
+</div>
+
+
 </body>
 </div>
 </html>
