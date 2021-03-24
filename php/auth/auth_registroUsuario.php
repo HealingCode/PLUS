@@ -10,7 +10,7 @@ if(isset($_POST['envioRegistro']))
      //Que la contraseña cumpla los requisitos
      header("Location:../../vistas/registrar_usuario.php?auth_registroUsuario=false");
 
-   }elseif($verify -> verify_repass($_POST['pass'],$_POST['repass'])) {
+   }elseif(!($verify -> verify_repass($_POST['pass'],$_POST['repass']))) {
      //Que la contraseña sea confirmada
      header("Location:../../vistas/registrar_usuario.php?auth_registroUsuario=false");
 
