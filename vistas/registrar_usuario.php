@@ -25,7 +25,7 @@ echo  "<p>Introduce los datos para registrarte</p>";
 <div class="form">
 
   <form method="POST" action ="\php\auth\auth_registroUsuario.php">
-
+<h1>¡Registrate!</h1>
 <p> Nombre de usuario</p>
   <input type="text" name="nombreUsuario">
 <p>  Contraseña</p>

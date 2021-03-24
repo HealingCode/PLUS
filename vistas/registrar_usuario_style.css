@@ -25,6 +25,11 @@ width: 100%;
     background: #60a3bc;
     text-align: center;
   }
+  div h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
 div input[type="text"],div input[type="password"]{
   border: 0;
@@ -32,14 +37,22 @@ div input[type="text"],div input[type="password"]{
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #4a69bd;
+  border: 2px solid #000000;
     padding: 14px 10px;
   width: 200px;
   outline: none;
   color: white;
   border-radius: 24px;
+  transition: 0.25s;
   }
-p{
+
+div input[type="text"]:focus,div input[type="password"]:focus{
+width: 280px;
+}
+
+
+
+p,h1{
 font-family:  "Montserrat", sans-serif;
 }
 
