@@ -1,37 +1,58 @@
-HEADER{
-background-color: #084B8A;
-padding: 5px;
-}
-div.sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-}
 BODY{
 background-color:#D8D8D8;
 margin: 0px;
-border: 0px;
-padding: 0px;
-width: 100%;
+
+}
+#cuerpo{
 }
 
-.form{
-    width: 300px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #60a3bc;
-    text-align: center;
-    border-radius: 24px;
-  }
-  div h1{
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
+#contenedor{
+  margin:auto;
+}
 
+#cabecera{
+background-color: #084B8A;
+color: black;
+position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 0;
+}
+
+#torso{
+padding: 4px;
+text-align: center;
+}
+
+
+#brazoIzquierdo{
+  width: 10%;
+  height: 100%;
+  background-color: white;
+  float: left;
+  margin: 0px;
+}
+
+#brazoDerecho{
+  width: 10%;
+  height: 100%;
+  background-color: gray;
+  float:right;
+  margin: 0px;
+}
+
+#pie{
+clear: both;
+}
+
+HEADER{
+padding: 3 3 3 10px;
+}
+
+
+#form{
+    background-color:  #60a3bc;
+  }
+/*
   div input[type="submit"]{
     border: 0;
     background: none;
@@ -66,7 +87,7 @@ div input[type="text"]:focus,input[type="submit"]:focus,div input[type="password
 width: 280px;
 border-color: #2ecc71;
 }
-
+*/
 p,h1{
 font-family:  "Montserrat", sans-serif;
 }
@@ -75,12 +96,8 @@ FOOTER{
 font-family: "Lato", sans-serif;
 font-size: 12px;
 color: gray;
-text-align: center;
 background-color: #A4A4A4;
-position: absolute;
-bottom: 0;
-right: 0;
-left: 0;
+text-align: center;
 }
 
 }
