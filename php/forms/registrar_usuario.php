@@ -46,17 +46,12 @@
   }
   ?>
 
-  <div id="brazoIzquierdo">
-    a
-  </div>
 
-  <div id="brazoDerecho">
-  </div>
 
-  <div id="torso">
+<div id="torso">
 
-      <div id="form">
-
+<div id="registro">
+<div id ="form">
       <form method="POST" action ="\php\auth\auth_registroUsuario.php">
 
         <h1>¡Registrate!</h1>
@@ -78,8 +73,9 @@
         <input type="submit" name = "envioRegistro" value="Confirmar">
         <br>Los elementos marcados * no son obligatorios
         </form>
+</div>
+</div>
 
-  </div>
 </div>
 
   <div id="pie">

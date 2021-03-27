@@ -1,13 +1,17 @@
 BODY{
 background-color:#D8D8D8;
-margin: 0px;
+margin: 0 0 0 0px;
 
 }
 #cuerpo{
 }
 
+#subcabeza{
+
+}
+
 #contenedor{
-  margin:auto;
+  margin:0 0 0 0px;
 }
 
 #cabecera{
@@ -16,17 +20,16 @@ color: black;
 position: -webkit-sticky; /* Safari */
 position: sticky;
 top: 0;
+z-index: 2;
 }
 
 #torso{
-padding: 4px;
 text-align: center;
 }
 
 
 #brazoIzquierdo{
   width: 10%;
-  height: 100%;
   background-color: white;
   float: left;
   margin: 0px;
@@ -44,25 +47,34 @@ text-align: center;
 clear: both;
 }
 
+#registro{
+  width:30%;
+  position: relative;
+  left:35%;
+}
+
 HEADER{
 padding: 3 3 3 10px;
 }
 
-
 #form{
-    background-color:  #60a3bc;
+    border-color: black;
+    border-width: medium;
+    border-style: solid;
+    background-color: white;
+    border-radius: 24px;
   }
-/*
-  div input[type="submit"]{
+
+div input[type="submit"]{
     border: 0;
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    border: 2px solid black;
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: red;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
@@ -75,7 +87,7 @@ div input[type="text"],div input[type="password"]{
   margin: 20px auto;
   text-align: center;
   border: 2px solid #000000;
-    padding: 14px 10px;
+  padding: 14px 10px;
   width: 200px;
   outline: none;
   color: white;
@@ -87,7 +99,7 @@ div input[type="text"]:focus,input[type="submit"]:focus,div input[type="password
 width: 280px;
 border-color: #2ecc71;
 }
-*/
+
 p,h1{
 font-family:  "Montserrat", sans-serif;
 }
