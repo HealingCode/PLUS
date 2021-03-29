@@ -51,17 +51,17 @@
 
         <h1>¡Registrate!</h1>
         <p> Nombre de usuario</p>
-        <input type="text" name="nombreUsuario">
+        <input type="text" name="nombreUsuario" required>
         <p> Contraseña</p>
-        <input type="password" name="pass">
+        <input type="password" name="pass" required>
         <p>  Confirma tu contraseña</p>
-        <input type="password" name="repass">
+        <input type="password" name="repass" required>
         <p>Ingresa tu email</p>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
         <p>Nombres</p>
-        <input type="text" name="nombrePila" maxlength="32">
+        <input type="text" name="nombrePila" maxlength="32" required>
         <p> apellido Paterno</p>
-        <input type="text" name="apellidoPate" maxlength="32">
+        <input type="text" name="apellidoPate" maxlength="32" required>
         <p> Apellido Materno* </p>
         <input type="text" name="apellidoMate" maxlength="32">
         <br>
@@ -74,12 +74,10 @@
 </div>
 
   <div id="pie">
-    <footer>
       <p> Plataforma Lógica Universitaria Superior tiene como objetivo primordial el aprendizaje.</p>
       <p> Mientras usted este utilizando PLUS, usted acepta que ha leído y aceptado nuestros terminos de uso,
       así como nuestra politica de privacidad y cookies </p>
       <p> Universidad de Guadalajara, esta pagina no es una copia literal de coursera y lectortmo, lo juramos. </p>
-    </footer>
   </div>
 
 

@@ -10,16 +10,22 @@ class sqlUsuario{
   }
 
   function deleteUser(){
+
   }
 
-  function updateUser()
-  {
+  function updateUser(){
+
   }
 
-  function editUser()
-  {
+  function editUser(){
+
   }
 
+  function selectFromUserEmailPass($email,$pass){
+    $conexion = conecta();
+    $result = mysqli_query($conexion,"SELECT email, password FROM usuario WHERE email='$email' AND password='$pass'");
+    return $result;
+    }
 
 }
 
