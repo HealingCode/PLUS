@@ -43,13 +43,15 @@ if(!$minus || !$mayus || !$num || strlen($pass) < 8 || strlen($pass) > 32)
 
 function verify_user($user){
 
-if(ctype_alnum($user)){
-  return true;
-}else{
+if(!(ctype_alnum($user))){
   return false;
+}elseif(!(strlen($user) > 25)){
+  return false;
+}else{
+  return true;
+}
 }
 
-}
 
 function verify_email($email)
 {
@@ -65,11 +67,11 @@ function verify_email($email)
 function verify_names($pila,$paterno,$materno)
 {
   if((strlen($pila) > 64)||(strlen($paterno) > 64)||(strlen($materno) > 64)){
-    return true;
-  }elseif(ctype_alnum($pila)||ctype_alnum($paterno)||(ctype_alnum($materno))){
-    return true;
-  }else{
     return false;
+  }elseif(ctype_alnum($pila)||ctype_alnum($paterno)||(ctype_alnum($materno))){
+    return false;
+  }else{
+    return true;
   }
 
 }

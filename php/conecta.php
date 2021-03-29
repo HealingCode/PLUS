@@ -8,7 +8,7 @@ $password="";
 $db="plus";
 $puerto="3308";
 mysqli_connect($server,$usuario,$password,$db,$puerto);
-$conexion = mysqli_connect($server,$usuario,$password,$db,$puerto);
+$conexion = new mysqli_connect($server,$usuario,$password,$db,$puerto);
 return $conexion;
 }
 
