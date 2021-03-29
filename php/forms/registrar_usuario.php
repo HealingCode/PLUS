@@ -1,7 +1,8 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../../vistas/registrar_usuario_style.css">
+  <link rel="stylesheet" type="text/css" href="../../vistas/CSS/forms_style.css">
+  <link rel="stylesheet" type="text/css" href="../../vistas/CSS/style_general.css">
   <title> Plataforma Lógica Universitaria Superior </title>
   <meta charset="UTF-8">
 </head>
@@ -13,21 +14,15 @@
   <div id="cuerpo">
 
   <div id="cabecera">
-    <header>
-
-      <div id = "navMenu">
-
-      </div>
 
       <div id="inicioBoton">
-        <a href = ""><img src = "Logo.png"> </a>
+      <a href = "../../../index.html"><img src = '../../vistas/recursos/Logo.png'></a>
       </div>
 
-      <div id="login">
-
+      <div id='titulo'>
+        PLUS
       </div>
 
-    </header>
   </div>
 
 

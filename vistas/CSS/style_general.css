@@ -1,0 +1,56 @@
+#contenedor{
+  margin:0 0 0 0px;
+}
+
+#cabecera{
+background-color: #084B8A;
+color: black;
+position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
+position: sticky;
+top: 0;
+z-index: 2;
+text-align: center;
+}
+
+/*Elementos de la cabecera*/
+
+#inicioBoton{
+  float:left;
+}
+
+#titulo{
+font-size: 48px;
+color:black;
+font-family:  "Montserrat", sans-serif;
+}
+
+#login{
+  float:right;
+}
+
+/*FIN elementos de la cabecera*/
+#cuerpo{
+}
+
+#torso{
+}
+
+
+#brazoIzquierdo{
+  width: 10%;
+  background-color: white;
+  float: left;
+  margin: 0px;
+}
+
+#brazoDerecho{
+  width: 10%;
+  height: 100%;
+  background-color: gray;
+  float:right;
+  margin: 0px;
+}
+
+#pie{
+clear: both;
+}

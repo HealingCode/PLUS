@@ -1,50 +1,6 @@
 BODY{
 background-color:#D8D8D8;
 margin: 0 0 0 0px;
-
-}
-#cuerpo{
-}
-
-#subcabeza{
-
-}
-
-#contenedor{
-  margin:0 0 0 0px;
-}
-
-#cabecera{
-background-color: #084B8A;
-color: black;
-position: -webkit-sticky; /* Safari */
-position: sticky;
-top: 0;
-z-index: 2;
-}
-
-#torso{
-text-align: center;
-}
-
-
-#brazoIzquierdo{
-  width: 10%;
-  background-color: white;
-  float: left;
-  margin: 0px;
-}
-
-#brazoDerecho{
-  width: 10%;
-  height: 100%;
-  background-color: gray;
-  float:right;
-  margin: 0px;
-}
-
-#pie{
-clear: both;
 }
 
 #registro{
@@ -53,11 +9,9 @@ clear: both;
   left:35%;
 }
 
-HEADER{
-padding: 3 3 3 10px;
-}
 
 #form{
+  text-align: center;
     border-color: black;
     border-width: medium;
     border-style: solid;

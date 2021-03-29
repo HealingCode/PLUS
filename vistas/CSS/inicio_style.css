@@ -1,3 +1,4 @@
+
 BODY{
 background-color:#D8D8D8;
 margin: 0px;
@@ -20,35 +21,17 @@ div.sticky {
 }
 
 
-#div1{
-background-image: url(B1.png);
+#portada{
+background-image: url(../recursos/B1.png);
 background-size: 2560px 1600px;
 border: 1px solid black;
 }
-
-.B_opciones{
-background-color: #04B45F;
-border: none;
-color: black;
-padding: 10%;
-text-align: center;
-display: inline-block;
-font-size: 28px;
-font-family:  "Lato", sans-serif;
-opacity: 0.6;
-transition: 0.3s;
-cursor: pointer;
-border-radius: 25%;
-z-index: -1;
-}
-.B_opciones:hover {opacity: 1}
 
 P{
 font-size : 12 pt;
 font-family:  "Lato", sans-serif ;
 font-weight: normal;
 }
-
 
 HEADER{
 background-color: #084B8A;
