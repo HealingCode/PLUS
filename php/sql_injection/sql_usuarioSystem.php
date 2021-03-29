@@ -17,9 +17,6 @@ class sqlUsuario{
 
   }
 
-  function editUser(){
-
-  }
 
   function selectFromUserEmailPass($email,$pass){
     $conexion = conecta();

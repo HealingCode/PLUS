@@ -11,8 +11,6 @@ $row = mysqli_fetch_array($consulta);
   {
     header("Location:../../php/forms/iniciar_sesion.php?try=fail.php");
   }else{
-    $mail = $row['email'];
-    echo "$mail" ;
     header("Location:../../vistas/perfil_Usuario.php");
   }
 
