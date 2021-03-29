@@ -64,11 +64,11 @@
         <p>Ingresa tu email</p>
         <input type="email" name="email">
         <p>Nombres</p>
-        <input type="text" name="nombrePila">
+        <input type="text" name="nombrePila" maxlength="32">
         <p> apellido Paterno</p>
-        <input type="text" name="apellidoPate">
+        <input type="text" name="apellidoPate" maxlength="32">
         <p> Apellido Materno* </p>
-        <input type="text" name="apellidoMate">
+        <input type="text" name="apellidoMate" maxlength="32">
         <br>
         <input type="submit" name = "envioRegistro" value="Confirmar">
         <br>Los elementos marcados * no son obligatorios

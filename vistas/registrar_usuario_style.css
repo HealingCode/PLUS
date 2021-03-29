@@ -90,7 +90,7 @@ div input[type="text"],div input[type="password"]{
   padding: 14px 10px;
   width: 200px;
   outline: none;
-  color: white;
+  color: black;
   border-radius: 24px;
   transition: 0.25s;
   }
