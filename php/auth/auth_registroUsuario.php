@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include $_SERVER['DOCUMENT_ROOT'].'\php\logic\verify.php';
 include $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
 $verify = new verifier();
