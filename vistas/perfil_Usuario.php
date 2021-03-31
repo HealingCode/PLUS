@@ -1,5 +1,5 @@
 <html>
-<link rel="stylesheet" type="text/css" href="/CSS/style_general.css">
+<link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <body>
 
   <div id = "cuerpo">
@@ -7,10 +7,10 @@
     <div id ='cabecera'>
       <div id="inicioBoton">
 
-        <a href = "../../../index.html"><img src = 'vistas/recursos/Logo.png'></a>
+        <a href = "../../../index.html"><img src = '/vistas/recursos/Logo.png'></a>
 
       </div>
-      
+
       <div id='titulo'>
         PLUS
       </div>
