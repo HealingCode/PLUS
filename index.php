@@ -1,3 +1,4 @@
+<?php session_start();?>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="vistas/CSS/inicio_style.css">

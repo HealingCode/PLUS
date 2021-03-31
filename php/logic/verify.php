@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
 class verifier{
 
 function __construct(){
@@ -80,7 +80,7 @@ function verify_names($pila,$paterno,$materno)
   }
 }
 
-}
+
 
 function verify_loginSession()
 {
@@ -89,13 +89,13 @@ $check = $_SESSION['login_user'];
 $result = $sql -> selectFromUserIdEmail($check);
 $row = mysqli_fetch_array($result);
 $loggedin_session = $row['email'];
-$loggedin_id = $row['id_usuario'];
-if(!isset($loggedin_session) || $loggedin_session = NULL)
+if($loggedin_session = NULL)
 {
-  header("Location:../../index.html");
+  header("Location:../../index.php");
 }
 
 }
 
+}
 
 ?>

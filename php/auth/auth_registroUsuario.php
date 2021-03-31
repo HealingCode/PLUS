@@ -1,6 +1,6 @@
 <?php session_start();
-include $_SERVER['DOCUMENT_ROOT'].'\php\logic\verify.php';
-include $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\logic\verify.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
 $verify = new verifier();
 $sqlUser = new sqlUsuario();
 if(isset($_POST['envioRegistro'])) {

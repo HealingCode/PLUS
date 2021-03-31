@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'].'\php\conecta.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\conecta.php';
 
 class sqlUsuario{
 
@@ -28,7 +28,7 @@ class sqlUsuario{
     function selectFromUserIdEmail($email)
     {
       $conexion = conecta();
-      $result = mysqli_query($conexion, "SELECT id, email FROM usuario WHERE email='$email' ");
+      $result = mysqli_query($conexion, "SELECT email FROM usuario WHERE email='$email' ");
       return $result;
     }
 

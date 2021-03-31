@@ -1,3 +1,9 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'..\php\logic\verify.php';
+session_start();
+$veri = new verifier();
+$veri -> verify_loginSession();
+
+?>
 <html>
 <head>
   <title>Panel de usuario</title>
