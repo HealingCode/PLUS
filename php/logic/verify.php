@@ -86,10 +86,11 @@ function verify_loginSession()
 {
 $sql = new sqlUsuario();
 $check = $_SESSION['login_user'];
+echo "Var check: $check";
 $result = $sql -> selectFromUserIdEmail($check);
 $row = mysqli_fetch_array($result);
 $loggedin_session = $row['email'];
-if($loggedin_session = NULL)
+if($loggedin_session == NULL)
 {
   header("Location:../../index.php");
 }
