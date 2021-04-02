@@ -11,7 +11,7 @@ $veri -> verify_loginSession();
 <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <link rel="stylesheet" type="text/css" href="CSS/profile_style.css">
 <body>
-
+<a href ="../../php/logic/logout.php">Logout</a>
   <div id = "cuerpo">
 
     <div id ='cabecera'>
