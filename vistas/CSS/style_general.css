@@ -2,19 +2,37 @@ body{
   margin: 0px;
 }
 
-#contenedor{
-  margin:0 0 0 0px;
+HEADER{
+  width: auto;
+  height: 8vh;
+  background-color: #084B8A;
+  color: black;
+  position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 10px;
 }
 
-#cabecera{
-background-color: #084B8A;
-color: black;
-position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
-position: sticky;
-top: 0;
-z-index: 2;
-text-align: center;
-padding: 5px;
+HEADER img{
+  width: auto;
+  height: auto;
+}
+
+FOOTER{
+  padding: 10px;
+  width: auto;
+  height: 32vh;
+  clear: both;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color: gray;
+  background-color: #A4A4A4;
+  text-align: center;
+}
+
+.contenedor{
+  margin:0 0 0 0px;
 }
 
 /*Elementos de la cabecera*/
@@ -32,14 +50,6 @@ font-family:  "Montserrat", sans-serif;
 #login{
   float:right;
 }
-
-/*FIN elementos de la cabecera*/
-#cuerpo{
-}
-
-#torso{
-}
-
 
 #brazoIzquierdo{
   width: 10%;
