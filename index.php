@@ -21,7 +21,7 @@
   <header>
     <div id="inicioBoton">
 
-      <a href = "../../../index.html"><img src = 'vistas/recursos/Logo.png'></a>
+      <a href = "../../../index.php"><img src = 'vistas/recursos/Logo.png'></a>
 
     </div>
 
@@ -31,9 +31,7 @@
 
   </header>
 
-<div id='torso'>
-
-<div id="portada">
+<div class="portada">
 
 <h1>PLUS</h1>
 
@@ -41,7 +39,7 @@
 
 <a href="php/forms/registrar_usuario.php">Registrate!</a>
 
-</div>
+
 
 <!-- CARRUSEL DE IMAGENES -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

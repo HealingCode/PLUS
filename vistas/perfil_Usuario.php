@@ -10,6 +10,7 @@ $veri -> verify_loginSession();
 </head>
 <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <link rel="stylesheet" type="text/css" href="CSS/profile_style.css">
+<meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
 <a href ="../../php/logic/logout.php">Logout</a>
   <div id = "cuerpo">
