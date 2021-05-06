@@ -26,7 +26,11 @@
     </div>
 
     <div id="login">
-      <a href="/php/forms/iniciar_sesion.php">Iniciar Sesion</a>
+      <b onclick="location.href='/php/forms/iniciar_sesion.php'">Iniciar sesion</b>
+    </div>
+
+    <div id="registar">
+      <b onclick="location.href='php/forms/registrar_usuario.php'">registrate</b>
     </div>
 
   </header>
@@ -39,7 +43,7 @@
 
 </div>
 
-<a href="php/forms/registrar_usuario.php">Registrate!</a>
+
 
 </div>
 
@@ -85,7 +89,7 @@
     <p> Plataforma Lógica Universitaria Superior tiene como objetivo primordial el aprendizaje.</p>
     <p> Mientras usted este utilizando PLUS, usted acepta que ha leído y aceptado nuestros terminos de uso,
       así como nuestra politica de privacidad y cookies </p>
-    <p> Universidad de Guadalajara, esta pagina no es una copia literal de coursera y lectortmo, lo juramos. </p>
+    <p> Universidad de Guadalajara, esta pagina no es una copia literal de coursera y lectortmo y/o paginas random de anime, lo juramos. </p>
 </footer>
 
 

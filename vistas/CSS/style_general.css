@@ -22,7 +22,7 @@ HEADER img{
 FOOTER{
   padding: 10px;
   width: auto;
-  height: 32vh;
+  height: 15vh;
   clear: both;
   font-family: "Lato", sans-serif;
   font-size: 1em;
@@ -38,7 +38,7 @@ FOOTER{
 /*Elementos de la cabecera*/
 
 #inicioBoton{
-  float:left;
+  float:right;
 }
 
 #titulo{
@@ -49,7 +49,13 @@ font-family:  "Montserrat", sans-serif;
 
 #login{
   float:right;
+
 }
+
+#registrar{
+  float: left;
+}
+
 
 #brazoIzquierdo{
   width: 10%;
