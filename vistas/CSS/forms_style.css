@@ -1,17 +1,22 @@
-#registro{
+.registro{
   width:30%;
   position: relative;
   left:35%;
+
 }
 
 
-#form{
+.form{
   text-align: center;
     border-color: black;
     border-width: medium;
     border-style: solid;
     background-color: white;
     border-radius: 24px;
+  }
+
+  .contenedorForm{
+    padding: 30px;
   }
 
 div input[type="submit"]{

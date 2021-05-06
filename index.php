@@ -29,7 +29,7 @@
       <b onclick="location.href='/php/forms/iniciar_sesion.php'">Iniciar sesion</b>
     </div>
 
-    <div id="registar">
+    <div id="registrar">
       <b onclick="location.href='php/forms/registrar_usuario.php'">registrate</b>
     </div>
 

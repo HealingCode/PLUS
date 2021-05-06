@@ -3,27 +3,21 @@
 <head>
   <link rel="stylesheet" type="text/css" href="../../vistas/CSS/forms_style.css">
   <link rel="stylesheet" type="text/css" href="../../vistas/CSS/style_general.css">
+  <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
   <title> Plataforma Lógica Universitaria Superior </title>
   <meta charset="UTF-8">
 </head>
 
 <body>
 
-  <div id= contenedor>
+  <div class= contenedor>
 
-  <div id="cuerpo">
 
-  <div id="cabecera">
-
+  <header>
       <div id="inicioBoton">
-      <a href = "../../../index.html"><img src = '../../vistas/recursos/Logo.png'></a>
+      <a href = "../../../index.php"><img src = '../../vistas/recursos/Logo.png'></a>
       </div>
-
-      <div id='titulo'>
-        PLUS
-      </div>
-
-  </div>
+  </header>
 
 
   <?php
@@ -43,10 +37,11 @@
 
 
 
-<div id="torso">
+<div class = contenedorForm>
 
-<div id="registro">
-<div id ="form">
+<div class="registro">
+
+<div class ="form">
       <form method="POST" action ="\php\auth\auth_registroUsuario.php">
 
         <h1>¡Registrate!</h1>
@@ -70,18 +65,16 @@
         </form>
 </div>
 </div>
-
 </div>
 
-  <div id="pie">
+<FOOTER>
       <p> Plataforma Lógica Universitaria Superior tiene como objetivo primordial el aprendizaje.</p>
       <p> Mientras usted este utilizando PLUS, usted acepta que ha leído y aceptado nuestros terminos de uso,
       así como nuestra politica de privacidad y cookies </p>
       <p> Universidad de Guadalajara, esta pagina no es una copia literal de coursera y lectortmo, lo juramos. </p>
-  </div>
+</FOOTER>
 
 
-    </div>
     </div>
 </body>
 
