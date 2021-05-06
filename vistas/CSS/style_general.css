@@ -38,11 +38,11 @@ FOOTER{
 /*Elementos de la cabecera*/
 
 #inicioBoton{
-  float:right;
+  float:left;
 }
 
 #login{
-  float:right;
+  float:left;
 
 }
 
