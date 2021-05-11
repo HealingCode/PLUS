@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\conecta.php';
 
 class sqlUsuario{
@@ -14,8 +15,19 @@ class sqlUsuario{
 
   }
 
-  function updateUser(){
+  function updateUser($editUser){
+    $conexion = conecta();
+    $var = $_SESSION['login_user'];
+    mysqli_query($conexion, "UPDATE usuario SET userName = '$editUser' WHERE email = '$var' ");
 
+
+
+  }
+  function selectUser(){
+    $conexion = conecta();
+    $var = $_SESSION['login_user'];
+    $result = mysqli_query($conexion, "SELECT * FROM usuario where email = '$var' ");
+    return $result;
   }
 
 
@@ -31,6 +43,8 @@ class sqlUsuario{
       $result = mysqli_query($conexion, "SELECT email FROM usuario WHERE email='$email' ");
       return $result;
     }
+
+
 
 }
 
