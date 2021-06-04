@@ -24,8 +24,8 @@ if (isset($_POST['envioUpdate'])) {
 
   }else{
 
-  $sqlUser -> updateUser($_POST['usuario']/*,$_POST['pass'],$_POST['nombre'],$_POST['apellido1'],$_POST['apellido2']*/);
-    header("Location:../../index.php?a=1");
+  $sqlUser -> updateUser($_POST['usuario'],$_POST['pass'],$_POST['nombre'],$_POST['apellido1'],$_POST['apellido2']);
+    header("Location:../../vistas/perfil_Usuario.php");
 
   }
 }

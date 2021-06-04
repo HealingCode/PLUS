@@ -15,10 +15,16 @@ class sqlUsuario{
 
   }
 
-  function updateUser($editUser){
+  function updateUser($editUser,$editpass,$editnom,$editaPate,$editaMate){
     $conexion = conecta();
     $var = $_SESSION['login_user'];
-    mysqli_query($conexion, "UPDATE usuario SET userName = '$editUser' WHERE email = '$var' ");
+    mysqli_query($conexion, "UPDATE usuario SET
+      userName = '$editUser',
+      password = '$editpass',
+      nombrePila = '$editnom',
+      apellidoPate = '$editaPate',
+      apellidoMate = '$editaMate'
+      WHERE email = '$var' ");
 
 
 
