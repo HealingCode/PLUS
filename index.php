@@ -26,11 +26,28 @@
     </div>
 
     <div id="login">
-      <b onclick="location.href='/php/forms/iniciar_sesion.php'">Iniciar sesion</b>
+
+<?php
+$temp = "\"location.href= '/php/forms/iniciar_sesion.php'\"";
+$temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
+      if(!(isset($_SESSION['login_user']))){
+        ECHO "<b onclick=" .$temp . ">Iniciar sesion</b>" ;
+      }else{
+        ECHO "<b onclick=" .$temp2 . ">Perfil de Usuario</b>";
+      }
+?>
+
+
     </div>
 
     <div id="registrar">
-      <b onclick="location.href='php/forms/registrar_usuario.php'">registrate</b>
+      <?php
+      $temp ="\"location.href='php/forms/registrar_usuario.php'\"";
+      if(!(isset($_SESSION['login_user'])))
+      {
+      ECHO "<b onclick=".$temp. ">registrate</b> ";
+      }
+      ?>
     </div>
 
   </header>
