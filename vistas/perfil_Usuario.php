@@ -40,9 +40,6 @@ $veri -> verify_loginSession();
 
       <ul class="infogen">
         <!-- Id usuario xd-->
-        <li>
-          218296225
-        </li>
         <!-- nombre xd-->
         <li>
           <?php echo $row["nombrePila"].' '.$row["apellidoPate"].' '.$row["apellidoMate"]?>

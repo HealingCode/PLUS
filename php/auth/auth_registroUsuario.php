@@ -29,7 +29,7 @@ if(isset($_POST['envioRegistro'])) {
     // -> LLAMADA DE METODO SQL
     // -> iniciar sesion
     $sqlUser -> insertUser($_POST['nombreUsuario'],$_POST['pass'],$_POST['email'],$_POST['nombrePila'],$_POST['apellidoPate'],$_POST['apellidoMate']);
-    header("Location:../../index.html?a=1");
+    header("Location:../../index.php");
   }
 }
 
