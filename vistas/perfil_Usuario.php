@@ -4,7 +4,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php
 $sql = new sqlUsuario();
 $consulta = $sql -> selectUser();
 $row = mysqli_fetch_array($consulta);
-
+$foto = $row['profilePic'];
 //session_start();
 $veri = new verifier();
 $veri -> verify_loginSession();
@@ -25,13 +25,16 @@ $veri -> verify_loginSession();
       </div>
       <div id='titulo'>
         PLUS
-        <input type="submit" name="jajanose" value="akimero">
+      <!--  <input type="submit" name="jajanose" value="akimero">-->
+      <a href="../../index.php">Home</a>
       </div>
 
     </div>
     <div id ='torso'>
       <div class="header">
-      <img class="avatar"src = '../../vistas/recursos/diomio.png'></a>
+      <?php
+      echo "<img class = \"avatar\" src = \" " . $foto . " \">";
+      ?>
       <!-- Aqui usuario-->
       <div id="editar">
         <button onclick="location.href='/php/forms/editar_usuario.php'">Editar Perfil</button>

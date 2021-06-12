@@ -9,7 +9,7 @@ email VARCHAR(255) NOT NULL,
 nombrePila VARCHAR(64) NOT NULL,
 apellidoPate VARCHAR(64) NOT NULL,
 apellidoMate VARCHAR(64) DEFAULT '',
-product_image BLOB,
+profilePic VARCHAR(100),
 PRIMARY KEY(id_usuario)
 )ENGINE=INNODB;
 

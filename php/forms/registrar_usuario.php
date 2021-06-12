@@ -42,7 +42,7 @@
 <div class="registro">
 
 <div class ="form">
-      <form method="POST" action ="\php\auth\auth_registroUsuario.php">
+      <form method="POST" action ="\php\auth\auth_registroUsuario.php" enctype="multipart/form-data">
 
         <h1>¡Registrate!</h1>
         <p> Nombre de usuario</p>

@@ -97,6 +97,18 @@ if($loggedin_session == NULL)
 
 }
 
+
+function verify_picSizeTrue($size){
+
+if($size > 20000000){
+  return false;
+}else{
+  return true;
+}
+
+}
+
+
 }
 
 ?>

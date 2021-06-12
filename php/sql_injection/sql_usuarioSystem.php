@@ -5,17 +5,17 @@ include_once $_SERVER['DOCUMENT_ROOT'].'\php\conecta.php';
 class sqlUsuario{
 
   /*FUNCIONES PARA LA TABLA DE USUARIOS*/
-  function insertUser($user,$pass,$email,$nombre,$ApePate,$ApeMate){
+  function insertUser($user,$pass,$email,$nombre,$ApePate,$ApeMate,$default){
     $conexion = conecta();
     $id='';
-    mysqli_query($conexion,"INSERT INTO usuario VALUES ('$id','$user','$pass','$email','$nombre','$ApePate','$ApeMate') ");
+    mysqli_query($conexion,"INSERT INTO usuario VALUES ('$id','$user','$pass','$email','$nombre','$ApePate','$ApeMate','$default') ");
   }
 
   function deleteUser(){
 
   }
 
-  function updateUser($editUser,$editpass,$editnom,$editaPate,$editaMate){
+  function updateUser($editUser,$editpass,$editnom,$editaPate,$editaMate,$ruta){
     $conexion = conecta();
     $var = $_SESSION['login_user'];
     mysqli_query($conexion, "UPDATE usuario SET
@@ -23,12 +23,13 @@ class sqlUsuario{
       password = '$editpass',
       nombrePila = '$editnom',
       apellidoPate = '$editaPate',
-      apellidoMate = '$editaMate'
+      apellidoMate = '$editaMate',
+      profilePic = '$ruta'
       WHERE email = '$var' ");
-
-
-
   }
+
+
+
   function selectUser(){
     $conexion = conecta();
     $var = $_SESSION['login_user'];
@@ -50,6 +51,12 @@ class sqlUsuario{
       return $result;
     }
 
+  function selectProfilePic($email)
+  {
+    $conexion = conecta();
+    $result = mysqli_query($conexion, "SELECT profilePic FROM usuario WHERE email = '$email' ");
+    return $result;
+  }
 
 
 }

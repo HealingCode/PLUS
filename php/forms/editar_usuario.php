@@ -28,7 +28,7 @@ $row = mysqli_fetch_array($consulta);
   <div class = contenedorForm>
     <div class="registro">
       <div class ="form">
-        <form method='POST' action="\php\auth\auth_editarPerfil.php">
+        <form method='POST' action="\php\auth\auth_editarPerfil.php" enctype="multipart/form-data">
           <h1>Editar perfil</h1> <br>
           <h2>Datos del usuario a modificar </h2>
           <h4>Usuario:</h4>
@@ -44,6 +44,9 @@ $row = mysqli_fetch_array($consulta);
           <input type="text" name="apellido1" value= <?php echo $row["apellidoPate"]?>>
           <h4>Apellido Materno:</h4>
           <input type="text" name="apellido2" value= <?php echo $row["apellidoMate"]?>>
+          <p> Foto de perfil </p>
+          <input type = "file" name="fotoPerfil" value = <?php echo $row["profilePic"] ?>>
+          <br>
           <input type = "submit" name = "envioUpdate" value="Confirmar">
         </form>
       </div>
