@@ -7,7 +7,7 @@ $sqlUser= new sqlUsuario();
 
 $directorioSubida = "../../vistas/uploadPics/";
 
-$extencionesPermitidas = ['jpg','png'];
+$extencionesPermitidas = ['jpg','png',''];
 
 $nombreArchivo = $_FILES['fotoPerfil']['name'];
 $sizeArchivo = $_FILES['fotoPerfil']['size'];
