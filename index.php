@@ -7,6 +7,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="vistas/css/video-js.css">
+  <link rel="stylesheet" href="vistas/css/estilos_repro.css">
+  <script> src="vistas/css/video.js" </script>
 
 
 <title> Plataforma Lógica Universitaria Superior </title>
@@ -16,17 +19,11 @@
 <body>
 
 <div class = "contenedor">
-
-
   <header>
     <div id="inicioBoton">
-
       <a href = "../../../index.html"><img src = 'vistas/recursos/Logo.png'></a>
-
     </div>
-
     <div id="login">
-
 <?php
 $temp = "\"location.href= '/php/forms/iniciar_sesion.php'\"";
 $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
@@ -36,8 +33,6 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
         ECHO "<b onclick=" .$temp2 . ">Perfil de Usuario</b>";
       }
 ?>
-
-
     </div>
 
     <div id="registrar">
@@ -64,7 +59,7 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
 
 </div>
 
-<!-- CARRUSEL DE IMAGENES -->
+<!-- CARRUSEL DE IMAGENES-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <ol class="carousel-indicators">
@@ -82,17 +77,13 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
       <div class="texto-encima">Texto</div>
       <div class="centrado">Centrado</div>
     </div>
-
     <div class="carousel-item">
       <img src="vistas/recursos/Libros1.jpg" >
     </div>
-
     <div class="carousel-item">
       <img src="vistas/recursos/Salon1.jpg">
     </div>
   </div>
-
-
   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </a>
@@ -100,6 +91,13 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
       <span class="carousel-control-next-icon"></span>
     </a>
 </div>
+<div class="container">
+  <h2> CLASES DISPONIBLES </h2>
+  <video  class="fm-video   " data-setup="{}" controls id="fm-video">
+    <source src="vistas/recursos/clase.mp4" type="video/mp4">
+  </video>
+</div>
+
 
 
 <footer>
@@ -111,6 +109,12 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
 
 
 </div>
+<script>
+  var reproductor = videojs('fm-video',{
+    fluid: true
+
+  })
+</script>
 </body>
 
 </html>
