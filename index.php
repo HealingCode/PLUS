@@ -40,7 +40,7 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
       $temp ="\"location.href='php/forms/registrar_usuario.php'\"";
       if(!(isset($_SESSION['login_user'])))
       {
-      ECHO "<b onclick=".$temp. ">registrate</b> ";
+      ECHO "<b onclick=".$temp. ">Registrate</b> ";
       }
       ?>
     </div>

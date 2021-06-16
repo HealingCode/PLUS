@@ -4,10 +4,12 @@ include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php
 $verify= new verifier();
 $sqlUser= new sqlUsuario();
 
+$consul = $sqlUser -> selectProfilePic($_SESSION["login_user"]);
+$row = mysqli_fetch_array($consul);
 
 $directorioSubida = "../../vistas/uploadPics/";
 
-$extencionesPermitidas = ['jpg','png',''];
+$extencionesPermitidas = ['jpg','png'];
 
 $nombreArchivo = $_FILES['fotoPerfil']['name'];
 $sizeArchivo = $_FILES['fotoPerfil']['size'];
@@ -38,14 +40,19 @@ if (isset($_POST['envioUpdate'])) {
 
   }elseif(! in_array($extencionArchivo,$extencionesPermitidas)) {
 
+    if($extencionArchivo == ''){
+      $sqlUser -> updateUser($_POST['usuario'],$_POST['pass'],$_POST['nombre'],$_POST['apellido1'],$_POST['apellido2'], $row["profilePic"]);
+        header("Location:../../vistas/perfil_Usuario.php");
+    }else{
     header("Location:../../php/forms/editar_usuario.php?auth_editarPerfil=false?=6");
+    }
 
   }elseif(!($verify -> verify_picSizeTrue($sizeArchivo))) {
 
     header("Location:../../php/forms/editar_usuario.php?auth_editarPerfil=false?=7");
 
   }else{
-echo $directorioFinal;
+
   move_uploaded_file($nombreTmpArchivo,$directorioFinal);
   $sqlUser -> updateUser($_POST['usuario'],$_POST['pass'],$_POST['nombre'],$_POST['apellido1'],$_POST['apellido2'], $directorioFinal );
     header("Location:../../vistas/perfil_Usuario.php");

@@ -4,7 +4,7 @@ body{
 
 HEADER{
   width: auto;
-  height: 8vh;
+  height: 10vh;
   background-color: #084B8A;
   color: black;
   position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
@@ -42,12 +42,12 @@ FOOTER{
 }
 
 #login{
-  float:left;
+  float:right;
 
 }
 
 #registrar{
-  float: left;
+  float: right;
 }
 
 #brazoIzquierdo{
