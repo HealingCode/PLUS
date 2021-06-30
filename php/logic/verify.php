@@ -1,5 +1,6 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
+
 class verifier{
 
 function __construct(){
@@ -106,6 +107,26 @@ if($size > 20000000){
   return true;
 }
 
+}
+
+//-------------------------
+//Verificadores para archivo
+//-------------------------
+
+function verify_courseSize($size){
+  if($size > 100000000){//100 mb
+    return false;
+  }else{
+    return true;
+  }
+}
+
+function verify_extencion($current, $allowed){
+  if($current == $allowed){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 
