@@ -28,7 +28,7 @@ $veri -> verify_loginSession();
       <!--  <input type="submit" name="jajanose" value="akimero">-->
       <a href="../../index.php">Home</a>
       </div>
-
+      <a href="../../php/forms/upload_curso.php">Sube un curso test</a>
     </div>
     <div id ='torso'>
       <div class="header">
