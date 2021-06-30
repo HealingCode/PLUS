@@ -22,7 +22,7 @@ HEADER img{
 FOOTER{
   padding: 10px;
   width: auto;
-  height: 15vh;
+  height: auto;
   clear: both;
   font-family: "Lato", sans-serif;
   font-size: 1em;
@@ -32,6 +32,7 @@ FOOTER{
 }
 
 .contenedor{
+  background-color: Black;
   margin:0 0 0 0px;
 }
 

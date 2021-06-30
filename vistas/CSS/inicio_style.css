@@ -1,7 +1,6 @@
 .portada{
-background-image: url(../recursos/B1.png);
-background-size: 2560px 1600px;
-border: 1px solid black;
+color: white;
+
 }
 
 b{
@@ -18,7 +17,8 @@ H1{
 text-align: center;
 font-size: 48px;
 font-family:  "Montserrat", sans-serif;
-color: black;
+color: gray;
+text-shadow: 2px 2px blue;
 }
 
 .carousel-inner img {
@@ -37,4 +37,8 @@ color: black;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 64px;
+    font-family:  "Viaoda Libre", sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px white;
 }
