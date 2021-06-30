@@ -13,22 +13,12 @@ profilePic VARCHAR(100),
 PRIMARY KEY(id_usuario)
 )ENGINE=INNODB;
 
-CREATE TABLE sesiones(
-
-
-)ENGINE=INNODB;
-
 CREATE TABLE cursos(
-
-
-
-)ENGINE=INNODB;
-
-CREATE TABLE lista_Sesiones(
-
-)ENGINE=INNODB;
-
-CREATE TABLE lista_Inscritos(
-
-
+id_curso INT NOT NULL AUTO_INCREMENT,
+course_name VARCHAR(64) ,
+organization VARCHAR(64),
+SCORM_ver VARCHAR(64),
+launch_dir VARCHAR(256),
+zip_dir VARCHAR(256),
+PRIMARY KEY(id_curso)
 )ENGINE=INNODB;
