@@ -21,7 +21,8 @@
 <div class = "contenedor">
   <header>
     <div id="inicioBoton">
-      <a href = "../../../index.html"><img src = 'vistas/recursos/Logo.png'></a>
+    <a href = "../../../index.php"><img src = 'vistas/recursos/Logo.png'></a>
+
     </div>
     <div id="login">
 <?php
@@ -45,13 +46,17 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
       ?>
     </div>
 
+<div id ="Buscar">
+<b onclick=" location.href='php/logic/busqueda.php'"> Explorar Cursos </b>
+</div>
+
   </header>
 
 <div id='torso'>
 
 <div id="portada">
 
-<h1>PLUS</h1>
+<h1>PLATAFORMA LOGICA UNIVERSITARIA SUPERIOR</h1>
 
 </div>
 
@@ -72,16 +77,19 @@ $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
   <div class="carousel-inner">
 
     <div class="carousel-item active">
-
       <img src="vistas/recursos/Estudiando1.jpg">
-      <div class="texto-encima">Texto</div>
-      <div class="centrado">Centrado</div>
+
+      <div class="centrado">Cursos<BR>Personalizados<BR>Por<BR>Ti</div>
+
+
     </div>
     <div class="carousel-item">
       <img src="vistas/recursos/Libros1.jpg" >
+      <div class="texto-encima">Texto</div>
     </div>
     <div class="carousel-item">
       <img src="vistas/recursos/Salon1.jpg">
+      <div class="texto-encima">Texto</div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
