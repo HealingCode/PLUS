@@ -28,10 +28,12 @@
 <?php
 $temp = "\"location.href= '/php/forms/iniciar_sesion.php'\"";
 $temp2 = "\"location.href='/vistas/perfil_Usuario.php'\"";
+$temp3 = "\"location.href='/php/logic/logout.php'\"";
       if(!(isset($_SESSION['login_user']))){
-        ECHO "<b onclick=" .$temp . ">Iniciar sesion</b>" ;
+        ECHO "<b onclick=" . $temp . ">Iniciar sesion</b>" ;
       }else{
-        ECHO "<b onclick=" .$temp2 . ">Perfil de Usuario</b>";
+        ECHO "<b onclick=" . $temp2 . ">Perfil de Usuario</b>";
+        ECHO "<b onclick=" . $temp3 . ">Logout</b>";
       }
 ?>
     </div>
