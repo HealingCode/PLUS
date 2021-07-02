@@ -21,7 +21,7 @@ HEADER img{
 
 FOOTER{
   padding: 10px;
-  width: auto;
+  width: 100%;
   height: auto;
   clear: both;
   font-family: "Lato", sans-serif;
@@ -51,10 +51,12 @@ FOOTER{
   float: right;
 }
 
-#brazoIzquierdo{
-  width: 10%;
-  background-color: white;
+.brazoIzquierdo{
+  width: 15vw;
+  height: 100%;
+  background-color:gray;
   float: left;
+  padding: 1em;
   margin: 0px;
 }
 
@@ -64,6 +66,15 @@ FOOTER{
   background-color: gray;
   float:right;
   margin: 0px;
+}
+
+.cuerpo{
+width: auto;
+height: 100%;
+background-color: black;
+color: white;
+padding-left: 20vw;
+padding-top: 4vh;
 }
 
 #pie{
