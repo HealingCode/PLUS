@@ -49,7 +49,7 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
     </div>
 
 <div id ="Buscar">
-<b onclick=" location.href='php/logic/busqueda.php'"> Explorar Cursos </b>
+<b onclick=" location.href='/vistas/busqueda.php'"> Explorar Cursos </b>
 </div>
 
   </header>
