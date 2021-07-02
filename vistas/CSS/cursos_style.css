@@ -1,0 +1,16 @@
+.curso{
+width: 15vw;
+height: 50vh;
+}
+
+.elemento{
+  width: 15vw;
+  height: 50vh;
+}
+
+.pieTitular{
+  width: auto;
+  height: 5vh;
+  background-color: gray;
+  text-align: center;
+}
