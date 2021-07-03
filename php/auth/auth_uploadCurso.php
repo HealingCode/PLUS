@@ -46,7 +46,6 @@ $banderaSubido = move_uploaded_file($fileTmpName, $dirToUpload);
 //DESCOMPRIMIR CURSO
 
 //--------------------
-// HAY QUE EditarR LA PARTE QUE DICE TEST EN EL METODO DE EXTRACTO
 // DEBIDO A QUE ESO DEBE SER ACORDE AL NOMBRE DEL CURSO EN CUESTION
 //--------------------
 if($banderaSubido){
@@ -63,6 +62,10 @@ $zip -> extractTo('../../cursos/SCORM/1.2/test');
 
 $pathManifest = '../../cursos/SCORM/1.2/test/imsmanifest.xml';
 $SCOdatos = $xmlLector -> getNameVerLauncher_XMLimsmanifest($pathManifest);
+
+if($SCOdatos != null){
+
+//CHECHA QUE SI ESTEN LOS DATOS NECESARIOS, SI NO, DEVUELVE UN ERROR
 $tituloCurso = $SCOdatos["nombre"];
 $version = $SCOdatos["version"];
 $launchDir = $SCOdatos["launcher"];
@@ -76,6 +79,12 @@ $sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload);
 
 $manipul -> delete_directory('../../cursos/SCORM/1.2/test/');
 header("Location:../../../../index.php");
+}else{
+//METODO AQUI QUE ADEMAS DE BORRAR DIRECTORIO, BORRE EL .ZIP ~~
+$manipul -> delete_directory('../../cursos/SCORM/1.2/test/');
+header("Location:../../../../index.php?a=ErrorCourse");
+}
+
 }
 
 ?>
