@@ -8,7 +8,6 @@ function getNameVerLauncher_XMLimsmanifest($filePath){
   $new = simplexml_load_string($xmlfile);
   $con = json_encode($new);
   $manifesto = json_decode($con,true);
-
 //==================================================
 //OBETER LOS DATOS DE INTERES
 //==================================================
@@ -46,6 +45,16 @@ return $vars;
 }else{
   return NULL;
 }
+}
+
+function printXML($filePath){
+
+  $xmlfile = file_get_contents($filePath);
+  $new = simplexml_load_string($xmlfile);
+  $con = json_encode($new);
+  $manifesto = json_decode($con,true);
+  print_r($manifesto);
+
 }
 }
 
