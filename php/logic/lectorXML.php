@@ -19,6 +19,11 @@ function getNameVerLauncher_XMLimsmanifest($filePath){
 // Archivo de lanzamiento
 //=========
 
+$bandMeta = array_key_exists("metadata",$manifesto);
+$bandOrga = array_key_exists("organizations",$manifesto);
+$bandResource = array_key_exists("resources",$manifesto);
+
+if($bandMeta && $bandOrga && $bandResource){
 $metadata = $manifesto["metadata"];
 $organizations = $manifesto["organizations"];
 $resources = $manifesto["resources"];
@@ -38,8 +43,10 @@ $vars = array(
 "launcher" => $launcher );
 
 return $vars;
-
+}else{
+  return NULL;
+}
+}
 }
 
-}
 ?>
