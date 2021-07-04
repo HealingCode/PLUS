@@ -23,7 +23,12 @@
 
           <form method='POST' action="\php\auth\auth_uploadCurso.php" enctype="multipart/form-data">
               <input type="file" name="cursoZip" id="zipToUpload">
-              <input type="submit" name="envioZip" value="subir">
+
+              Agregue una sionopsis sobre el curso ingresado antes de subirlo.
+          <p>
+            <input type="text" name="Sinopsis" value="Escribie una sinopsis aqui">
+          </p>
+            <input type="submit" name="envioZip" value="subir">
           </form>
 
         </div>

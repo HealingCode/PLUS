@@ -85,3 +85,13 @@ color: gray;
 background-color: #A4A4A4;
 text-align: center;
 }
+
+.texto{
+  background-color: white;
+  text-align: center;
+    border-color: black;
+    border-width: medium;
+    border-style: solid;
+    border-radius: 24px;
+
+}

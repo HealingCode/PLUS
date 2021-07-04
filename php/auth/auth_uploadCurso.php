@@ -11,6 +11,8 @@ $manipul = new fileManipulate();
 // Variables de archivo ZIP
 //--------------------
 
+$Sinopsis= $_POST['Sinopsis'];
+
 $dirToUploadZip = "../../cursos/SCORM/1.2/zips/";
 $extencionPermitida = 'zip';
 $fileName = $_FILES['cursoZip']['name'];
@@ -73,7 +75,7 @@ $launchDir = $SCOdatos["launcher"];
 mkdir("../../cursos/SCORM/". $version.'/' . $tituloCurso.'/');
 $zip -> extractTo("../../cursos/SCORM/". $version. '/'. $tituloCurso);
 $zip -> close();
-$sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload);
+$sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload,$Sinopsis);
 
 //BORRAR LOS ARCHIVOS
 
