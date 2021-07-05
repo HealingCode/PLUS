@@ -1,6 +1,7 @@
-function registrarCurso(str) {
+function registrarCurso(idCurso,idStud) {
 
 const scohttp = new XMLHttpRequest();
-scohttp.open("POST", "php\logic\registrarCurso.php?q="+str);
-xhttp.send();
+scohttp.open("POST", 'php\logic\registrarCurso.php',true);
+scohttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+scohttp.send("idCurso="+idCurso+"&nombre="+idStud);
 }
