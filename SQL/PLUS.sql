@@ -20,5 +20,6 @@ SCORM_ver VARCHAR(64),
 launch_dir VARCHAR(256),
 zip_dir VARCHAR(256),
 imgDir VARCHAR(256),
+Sinopsis varchar(256),
 PRIMARY KEY(id_curso)
 )ENGINE=INNODB;

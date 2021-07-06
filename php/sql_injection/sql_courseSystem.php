@@ -7,12 +7,12 @@ class sqlCurso{
 
 
 
-function insertCurso($name, $version, $launchDir, $zipDir) {
+function insertCurso($name, $version, $launchDir, $zipDir, $Sinopsis) {
 $conexion = conecta();
     $id='';
     $default = '../../vistas/default.jpg';
     mysqli_query($conexion,"INSERT INTO cursos VALUES (
-      '$id','$name','$version','$launchDir','$zipDir','$default') ");
+      '$id','$name','$version','$launchDir','$zipDir','$default','$Sinopsis') ");
 
 }
 
