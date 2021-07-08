@@ -23,7 +23,26 @@ $conexion = conecta();
       return $cursos;
 }
 
+  function printCursos(){
+    $conexion = conecta();
+    $cursos = $this->selectCursos();
 
+    while($row=mysqli_fetch_array($cursos)){
+      echo '<a href="../../vistas\paginaCurso.php?id=x">';
+      echo '<div class ="curso">';
+
+      echo '<div class="elemento">';
+      echo '<img src = "'.$row['imgDir'].'">';
+      echo '</div>';
+      echo '<div class ="pieTitular">';
+      echo $row['course_name'];
+      echo '</div>';
+
+      echo '</div>';
+      echo '</a>';
+    }
+
+  }
 
 }
 
