@@ -23,3 +23,8 @@ imgDir VARCHAR(256),
 Sinopsis varchar(256),
 PRIMARY KEY(id_curso)
 )ENGINE=INNODB;
+
+CREATE TABLE registroCursos(
+email VARCHAR(255) NOT NULL,
+curso INT NOT NULL
+)ENGINE=INNODB;
