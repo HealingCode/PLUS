@@ -30,7 +30,9 @@ $sqlCursos = new sqlCurso();
     </div>
 
     <div class = "cuerpo">
+      <div class ="flex-container">
       <?php $sqlCursos -> printCursos() ?>
+    </div>
     </div>
 
     <FOOTER>
