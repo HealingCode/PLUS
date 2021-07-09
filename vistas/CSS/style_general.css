@@ -31,6 +31,15 @@ FOOTER{
   text-align: center;
 }
 
+b{
+border: 0;
+border-radius: 8px;
+padding: 1px 25px;
+background-color: rgba(0, 0, 0, .5);
+color: #fff;
+cursor: pointer;
+}
+
 .contenedor{
   background-color: Black;
   margin:0 0 0 0px;
