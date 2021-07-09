@@ -8,7 +8,8 @@ class sqlUsuario{
   function insertUser($user,$pass,$email,$nombre,$ApePate,$ApeMate,$default){
     $conexion = conecta();
     $id='';
-    mysqli_query($conexion,"INSERT INTO usuario VALUES ('$id','$user','$pass','$email','$nombre','$ApePate','$ApeMate','$default') ");
+    mysqli_query($conexion,"INSERT INTO usuario
+      VALUES ('$id','$user','$pass','$email','$nombre','$ApePate','$ApeMate','$default') ");
   }
 
   function deleteUser(){
@@ -33,34 +34,58 @@ class sqlUsuario{
   function selectUser(){
     $conexion = conecta();
     $var = $_SESSION['login_user'];
-    $result = mysqli_query($conexion, "SELECT * FROM usuario where email = '$var' ");
+    $result = mysqli_query($conexion, "SELECT * FROM usuario
+      WHERE email = '$var' ");
     return $result;
   }
 
 
   function selectFromUserEmailPass($email,$pass){
     $conexion = conecta();
-    $result = mysqli_query($conexion, "SELECT id_usuario FROM usuario WHERE email='$email' AND password='$pass'");
+    $result = mysqli_query($conexion, "SELECT id_usuario FROM usuario
+      WHERE email='$email' AND password='$pass'");
     return $result;
   }
 
     function selectFromUserIdEmail($email)
     {
       $conexion = conecta();
-      $result = mysqli_query($conexion, "SELECT email FROM usuario WHERE email='$email' ");
+      $result = mysqli_query($conexion, "SELECT email FROM usuario
+        WHERE email='$email' ");
       return $result;
     }
 
   function selectProfilePic($email)
   {
     $conexion = conecta();
-    $result = mysqli_query($conexion, "SELECT profilePic FROM usuario WHERE email = '$email' ");
+    $result = mysqli_query($conexion, "SELECT profilePic FROM usuario
+      WHERE email = '$email' ");
     return $result;
+  }
+
+//============================================================
+// Métodos relacionados a la tabla ~> registroCursos
+//============================================================
+
+  function selectRegistroCursos(){
+    $conexion = conecta();
+    $registro = mysqli_query($conexion,
+    "SELECT * FROM registroCursos");
+    return $registro;
+  }
+
+  function selectRegistroCursosSpecific($email,$curso){
+    $conexion = conecta();
+    $registro = mysqli_query($conexion,
+    "SELECT * FROM registroCursos
+    WHERE email = '$email' AND curso = '$curso'");
+    return $registro;
   }
 
   function registrarCurso($idUser, $idCurso){
     $conexion = conecta();
-    mysqli_query($conexion, "INSERT INTO registroCursos VALUES('$idUser','$idCurso')");
+    mysqli_query($conexion, "INSERT INTO registroCursos
+      VALUES('$idUser','$idCurso')");
   }
 
 }
