@@ -58,6 +58,10 @@ class sqlUsuario{
     return $result;
   }
 
+  function registrarCurso($idUser, $idCurso){
+    $conexion = conecta();
+    mysqli_query($conexion, "INSERT INTO registroCursos VALUES('$idUser','$idCurso')");
+  }
 
 }
 
