@@ -28,7 +28,7 @@ $conexion = conecta();
     $cursos = $this->selectCursos();
 
     while($row=mysqli_fetch_array($cursos)){
-      echo '<a href="../../vistas\paginaCurso.php?id=x">';
+      echo '<a href="../../vistas\paginaCurso.php?id='.$row['id_curso'].'">';
       echo '<div class ="curso">';
 
       echo '<div class="elemento">';
