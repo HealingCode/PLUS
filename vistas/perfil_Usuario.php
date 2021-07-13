@@ -61,6 +61,5 @@ $veri -> verify_loginSession();
     </div>
     <div id ='pie'>
     </div>
-  </div>
 </body>
-<html>
+</html>
