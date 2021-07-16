@@ -7,7 +7,7 @@ class sqlCurso{
 
 
 
-function insertCurso($name, $version, $launchDir, $zipDir, $Sinopsis) {
+function insertCurso($name, $version, $launchDir, $zipDir, $Sinopsis, $owner) {
 $conexion = conecta();
     $id='';
     $default = '../../vistas/default.jpg';
@@ -18,7 +18,8 @@ $conexion = conecta();
       '$launchDir',
       '$zipDir',
       '$default',
-      '$Sinopsis')
+      '$Sinopsis',
+      '$owner')
       ");
 
 }
@@ -36,6 +37,15 @@ $conexion = conecta();
     $cursos = mysqli_query($conexion,
     "SELECT * FROM cursos
     WHERE id_curso = '$id'");
+
+      return $cursos;
+  }
+
+  function selectCursosByOwner($id){
+    $conexion = conecta();
+    $cursos = mysqli_query($conexion,
+    "SELECT * FROM cursos
+    WHERE owner_email = '$id'");
 
       return $cursos;
   }
@@ -119,10 +129,20 @@ $conexion = conecta();
 
   function printCursosSubidos($idUser){
     $conexion = conecta();
-    $cursos = mysqli_query($conexion,
-    "SELECT * FROM cursos
-    WHERE");
+    $cursos = $this -> selectCursosByOwner($idUser);
 
+    while($row=mysqli_fetch_array($cursos)){
+      echo '<a href="../../vistas\paginaCurso.php?id='.$row['id_curso'].'">';
+      echo '<div class ="curso">';
+      echo '<div class="elemento">';
+      echo '<img src = "'.$row['imgDir'].'">';
+      echo '</div>';
+      echo '<div class ="pieTitular">';
+      echo $row['course_name'];
+      echo '</div>';
+      echo '</div>';
+      echo '</a>';
+    }
   }
 
 }
