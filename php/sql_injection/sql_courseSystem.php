@@ -12,13 +12,21 @@ $conexion = conecta();
     $id='';
     $default = '../../vistas/default.jpg';
     mysqli_query($conexion,"INSERT INTO cursos VALUES (
-      '$id','$name','$version','$launchDir','$zipDir','$default','$Sinopsis') ");
+      '$id',
+      '$name',
+      '$version',
+      '$launchDir',
+      '$zipDir',
+      '$default',
+      '$Sinopsis')
+      ");
 
 }
 
   function selectCursos(){
     $conexion = conecta();
-    $cursos = mysqli_query($conexion, "SELECT * FROM cursos");
+    $cursos = mysqli_query($conexion,
+    "SELECT * FROM cursos");
 
       return $cursos;
 }
@@ -41,6 +49,26 @@ $conexion = conecta();
       echo '</div>';
       echo '</a>';
     }
+
+  }
+
+  function printCursosInscritos($idUser){
+    $conexion = conecta();
+    $cursos = mysqli_query($conexion,
+    "SELECT * FROM inscripciones
+    WHERE id_usuario = '$idUser'");
+    // ENTONCES SE HACE UNA CONSULTA A LA TABLA DE CURSOS
+    // SE OBTIENE LA INFORMACION DEL CURSO
+    // SE DESPLIEGA DE MANERA BONITA
+    // Y ENTONCES SI SE CLICKEA ~~
+    //EL <a> REDIRIGE A UN HANDLER CON LOS DATOS DEL USUARIO
+  }
+
+  function printCursosSubidos($idUser){
+    $conexion = conecta();
+    $cursos = mysqli_query($conexion,
+    "SELECT * FROM cursos
+    WHERE");
 
   }
 
