@@ -7,6 +7,7 @@ $verify = new verifier();
 $sqlCurso = new sqlCurso();
 $xmlLector = new lectorXML();
 $manipul = new fileManipulate();
+$owner = $_SESSION['login_user'];
 //--------------------
 // Variables de archivo ZIP
 //--------------------
@@ -75,7 +76,7 @@ $launchDir = $SCOdatos["launcher"];
 mkdir("../../cursos/SCORM/". $version.'/' . $tituloCurso.'/');
 $zip -> extractTo("../../cursos/SCORM/". $version. '/'. $tituloCurso);
 $zip -> close();
-$sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload,$Sinopsis);
+$sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload,$Sinopsis,$owner );
 
 //BORRAR LOS ARCHIVOS
 
