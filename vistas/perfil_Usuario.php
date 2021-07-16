@@ -2,9 +2,9 @@
 include_once $_SERVER['DOCUMENT_ROOT'].'..\php\logic\verify.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_courseSystem.php';
-$sql = new sqlUsuario();
+$sqlUser = new sqlUsuario();
 $sqlCursos = new sqlCurso();
-$consulta = $sql -> selectUser();
+$consulta = $sqlUser -> selectUser();
 $row = mysqli_fetch_array($consulta);
 $foto = $row['profilePic'];
 //session_start();
@@ -21,17 +21,16 @@ $veri -> verify_loginSession();
 <link rel="stylesheet" type="text/css" href="../../vistas/CSS/cursos_style.css">
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
-<a href ="../../php/logic/logout.php">Logout</a>
+<br><a href="../../index.php">Home</a><br>
+<a href="../../php/forms/upload_curso.php">Sube un curso test</a><br>
+<a href ="../../php/logic/logout.php">Logout</a><br>
+<a href ="../../vistas/adminCurso.php">Administrar tu cursos</a>
   <div id = "cuerpo">
     <div id ='cabecera'>
       <div id="inicioBoton">
       </div>
       <div id='titulo'>
-        PLUS
-      <!--  <input type="submit" name="jajanose" value="akimero">-->
-      <a href="../../index.php">Home</a>
       </div>
-      <a href="../../php/forms/upload_curso.php">Sube un curso test</a>
     </div>
     <div id ='torso'>
       <div class="header">
@@ -57,7 +56,7 @@ $veri -> verify_loginSession();
       </ul>
       <div class = "cuerpo">
         <div class ="flex-container">
-        <?php $sqlCursos -> printCursos() ?>
+        <?php $sqlCursos -> printCursosInscritos($_SESSION['login_user']); ?>
       </div>
       </div>
       </div>
