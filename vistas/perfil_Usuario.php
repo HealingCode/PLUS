@@ -1,7 +1,9 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'..\php\logic\verify.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_courseSystem.php';
 $sql = new sqlUsuario();
+$sqlCursos = new sqlCurso();
 $consulta = $sql -> selectUser();
 $row = mysqli_fetch_array($consulta);
 $foto = $row['profilePic'];
@@ -16,6 +18,7 @@ $veri -> verify_loginSession();
 </head>
 <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <link rel="stylesheet" type="text/css" href="CSS/profile_style.css">
+<link rel="stylesheet" type="text/css" href="../../vistas/CSS/cursos_style.css">
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
 <a href ="../../php/logic/logout.php">Logout</a>
@@ -52,9 +55,10 @@ $veri -> verify_loginSession();
           <a href="mailto:Cuauhtemoc.batres@alumnos.udg">Cuauhtemoc.batres@alumnos.udg</a>
         </li>-->
       </ul>
-      <div>
-        <h3>Acerca de</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class = "cuerpo">
+        <div class ="flex-container">
+        <?php $sqlCursos -> printCursos() ?>
+      </div>
       </div>
       </div>
       </div>
