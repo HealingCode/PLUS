@@ -28,3 +28,8 @@ CREATE TABLE registroCursos(
 email VARCHAR(255) NOT NULL,
 curso INT NOT NULL
 )ENGINE=INNODB;
+
+CREATE TABLE inscripciones(
+id_usuario VARCHAR(255) NOT NULL,
+id_curso INT NOT NULL
+)ENGINE=INNODB;
