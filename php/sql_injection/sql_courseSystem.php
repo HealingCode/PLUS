@@ -24,6 +24,12 @@ $conexion = conecta();
 
 }
 
+function deleteCurso($idCurso){
+$conexion = conecta();
+mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
+
+}
+
   function selectCursos(){
     $conexion = conecta();
     $cursos = mysqli_query($conexion,
@@ -142,9 +148,17 @@ $conexion = conecta();
       echo '</div>';
       echo '</div>';
       echo '</a>';
+
+      /*
+        Impresion de botones que borran y editan haciendo llamada AJAX
+
+        Ejemplo : echo '<b id="registrador" onclick="registrarCurso(\''.$idCurso.'\',\''.$idStd.'\')">Registrate al Curso </b>';
+      */
+
+      echo '<b id = "borrador" onclick= "borrarCurso(\''.$row['id_curso'].'\')">Borrar</b>';
+      echo '<b id = "editador" onclick= "editarCurso()">Editar</b>';
     }
   }
-
 }
 
 ?>
