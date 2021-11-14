@@ -24,11 +24,6 @@ $sqlCursos = new sqlCurso();
       </div>
 
     </HEADER>
-
-    <div class = "brazoIzquierdo">
-      TODO el filtro aqui ~
-    </div>
-
     <div class = "cuerpo">
       <div class ="flex-container">
       <?php $sqlCursos -> printCursos() ?>
