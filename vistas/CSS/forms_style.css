@@ -19,22 +19,8 @@
     padding: 30px;
   }
 
-div input[type="submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid black;
-    padding: 14px 40px;
-    outline: none;
-    color: red;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-
-div input[type="text"],div input[type="password"]{
+/* TABLA REGISTRAR USUARIO  */
+div input[type="text"],div input[type="password"],div input[type="email"]{
   border: 0;
   background: none;
   display: block;
@@ -49,11 +35,27 @@ div input[type="text"],div input[type="password"]{
   transition: 0.25s;
   }
 
-div input[type="text"]:focus,input[type="submit"]:focus,div input[type="password"]:focus{
+  div input[type="submit"]{
+      border: 0;
+      background: none;
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid black;
+      padding: 14px 40px;
+      outline: none;
+      color: red;
+      border-radius: 24px;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+div input[type="text"]:focus,input[type="submit"]:focus,div input[type="password"]:focus,div input[type="email"]:focus{
 width: 280px;
 border-color: #2ecc71;
 }
 
+/*FIN TABLA REGISTRAR USUARIO */
 p,h1{
 font-family:  "Montserrat", sans-serif;
 }
