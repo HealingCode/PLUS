@@ -1,6 +1,6 @@
 .header{
 text-align: center;
-height: 300px;
+height: 340px;
 padding: 12px;
 background-size: 300px 50px;
 background-image: url('../../vistas/recursos/textura.png');
@@ -10,6 +10,7 @@ background-color: black;
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  clear: both;
 }
 .user-name{
 font-size: 18px;
@@ -36,6 +37,9 @@ padding: 12px 25px;
 background-color: rgba(0, 0, 0, .5);
 color: #fff;
 cursor: pointer;
+}
+botones{
+  
 }
 
 @media (max-width: 750px) {

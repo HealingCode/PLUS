@@ -26,9 +26,10 @@
               <br>
               Agregue una sinopsis sobre el curso ingresado antes de subirlo.
           <p>
-            <input type="text" name="Sinopsis" value="Escribe una sinopsis aquí">
+            <textarea placeholder="Escribe una sinopsis aquí" name="Sinopsis" cols="50" rows="30" ></textarea>
+
           </p>
-            <input type="submit" name="envioZip" value="subir">
+            <input type="submit" name="envioZip" value="Subir">
           </form>
 
         </div>

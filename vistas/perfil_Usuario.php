@@ -7,24 +7,28 @@ $sqlCursos = new sqlCurso();
 $consulta = $sqlUser -> selectUser();
 $row = mysqli_fetch_array($consulta);
 $foto = $row['profilePic'];
-//session_start();
-$veri = new verifier();
-$veri -> verify_loginSession();
+
+/*$veri = new verifier();
+$veri -> verify_loginSession();*/
 ?>
 
 <html>
 <head>
   <title>Panel de usuario</title>
 </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <link rel="stylesheet" type="text/css" href="CSS/profile_style.css">
 <link rel="stylesheet" type="text/css" href="../../vistas/CSS/cursos_style.css">
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
-<br><a href="../../index.php">Home</a><br>
-<a href="../../php/forms/upload_curso.php">Sube un curso test</a><br>
-<a href ="../../php/logic/logout.php">Logout</a><br>
-<a href ="../../vistas/adminCurso.php">Administrar tu cursos</a>
+
+<button onclick="location.href='../../index.php' "class="btn btn-outline-danger">Home</button>
+<button onclick="location.href='../../php/logic/logout.php'" class="btn btn-outline-danger">Logout</button>
+<button onclick="location.href='../../vistas/adminCurso.php'" class="btn btn-outline-info" name="admicur"  >Administrar tus cursos</button>
+<button onclick="location.href='../../php/forms/upload_curso.php'" class="btn btn-outline-success">Sube un curso</button>
+
   <div id = "cuerpo">
     <div id ='cabecera'>
       <div id="inicioBoton">
@@ -34,25 +38,23 @@ $veri -> verify_loginSession();
     </div>
     <div id ='torso'>
       <div class="header">
+        <div class="botones">
+
+
+        </div>
       <?php
       echo "<img class = \"avatar\" src = \" " . $foto . " \">";
       ?>
-      <!-- Aqui usuario-->
+
       <div id="editar">
-        <button onclick="location.href='/php/forms/editar_usuario.php'">Editar Perfil</button>
+        <button onclick="location.href='/php/forms/editar_usuario.php'" class="btn btn-outline-warning">Editar Perfil</button>
       </div>
       <h1 class="user-name" ><?php echo $row["userName"]?></h1>
 
       <ul class="infogen">
-        <!-- Id usuario xd-->
-        <!-- nombre xd-->
         <li>
           <?php echo $row["nombrePila"].' '.$row["apellidoPate"].' '.$row["apellidoMate"]?>
         </li>
-        <!-- Correo electronico xd
-        <li>
-          <a href="mailto:Cuauhtemoc.batres@alumnos.udg">Cuauhtemoc.batres@alumnos.udg</a>
-        </li>-->
       </ul>
       <div class = "cuerpo">
         <div class ="flex-container">
