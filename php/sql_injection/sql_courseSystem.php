@@ -110,7 +110,7 @@ mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
     /*
     ~~ Impresion de los cursos ~~
     */
-    echo '<a href="#">';
+    echo '<a href="'.$row['launch_dir'].'">';
     echo '<div class ="curso">';
 
     echo '<div class="elemento">';
