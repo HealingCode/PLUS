@@ -1,7 +1,7 @@
 <?php
 
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\conecta.php';
-
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
 
 class sqlCurso{
 
@@ -24,11 +24,16 @@ $conexion = conecta();
 
 }
 
-function deleteCurso($idCurso){
-$conexion = conecta();
-mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
+  function deleteCurso($idCurso){
+    $conexion = conecta();
+    mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
 
 }
+
+  function deleteInscritosCursos($idCurso){
+    $conexion = conecta();
+    mysqli_query($conexion, "DELETE FROM registrocursos WHERE curso = '$idCurso'");
+  }
 
   function selectCursos(){
     $conexion = conecta();
@@ -82,6 +87,10 @@ mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
     $registrados = mysqli_query($conexion,
     "SELECT curso FROM registroCursos
     WHERE email = '$idUser'");
+    $sqlUser = new sqlUsuario();
+    $usuario = $sqlUser -> selectUser();
+    $datosUsuario = mysqli_fetch_array($usuario);
+    $idUser= $datosUsuario['id_usuario'];
 
     // ENTONCES SE HACE UNA CONSULTA A LA TABLA DE CURSOS
     // SE OBTIENE LA INFORMACION DEL CURSO
@@ -110,7 +119,7 @@ mysqli_query($conexion, "DELETE FROM cursos WHERE id_curso = '$idCurso'");
     /*
     ~~ Impresion de los cursos ~~
     */
-    echo '<a href="'.$row['launch_dir'].'">';
+    echo '<a href="'.$row['launch_dir'].'?SCOInstanceID='.$idUser.'">';
     echo '<div class ="curso">';
 
     echo '<div class="elemento">';
