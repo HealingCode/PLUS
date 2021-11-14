@@ -1,8 +1,10 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'].'..\php\logic\verify.php';
 include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_usuarioSystem.php';
-$sql = new sqlUsuario();
-$consulta = $sql -> selectUser();
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\sql_injection\sql_courseSystem.php';
+$sqlUser = new sqlUsuario();
+$sqlCursos = new sqlCurso();
+$consulta = $sqlUser -> selectUser();
 $row = mysqli_fetch_array($consulta);
 $foto = $row['profilePic'];
 //session_start();
@@ -16,19 +18,19 @@ $veri -> verify_loginSession();
 </head>
 <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
 <link rel="stylesheet" type="text/css" href="CSS/profile_style.css">
+<link rel="stylesheet" type="text/css" href="../../vistas/CSS/cursos_style.css">
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
-<a href ="../../php/logic/logout.php">Logout</a>
+<br><a href="../../index.php">Home</a><br>
+<a href="../../php/forms/upload_curso.php">Sube un curso test</a><br>
+<a href ="../../php/logic/logout.php">Logout</a><br>
+<a href ="../../vistas/adminCurso.php">Administrar tu cursos</a>
   <div id = "cuerpo">
     <div id ='cabecera'>
       <div id="inicioBoton">
       </div>
       <div id='titulo'>
-        PLUS
-      <!--  <input type="submit" name="jajanose" value="akimero">-->
-      <a href="../../index.php">Home</a>
       </div>
-      <a href="../../php/forms/upload_curso.php">Sube un curso test</a>
     </div>
     <div id ='torso'>
       <div class="header">
@@ -52,9 +54,10 @@ $veri -> verify_loginSession();
           <a href="mailto:Cuauhtemoc.batres@alumnos.udg">Cuauhtemoc.batres@alumnos.udg</a>
         </li>-->
       </ul>
-      <div>
-        <h3>Acerca de</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class = "cuerpo">
+        <div class ="flex-container">
+        <?php $sqlCursos -> printCursosInscritos($_SESSION['login_user']); ?>
+      </div>
       </div>
       </div>
       </div>

@@ -22,5 +22,12 @@ class fileManipulate{
       rmdir($dirname);
       return true;
  }
+
+ function delete_file($dirname){
+
+   unlink($dirname);
+
+ }
+
 }
  ?>

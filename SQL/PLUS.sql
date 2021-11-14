@@ -15,16 +15,23 @@ PRIMARY KEY(id_usuario)
 
 CREATE TABLE cursos(
 id_curso INT NOT NULL AUTO_INCREMENT,
-course_name VARCHAR(64) ,
+course_name VARCHAR(64),
 SCORM_ver VARCHAR(64),
 launch_dir VARCHAR(256),
 zip_dir VARCHAR(256),
 imgDir VARCHAR(256),
-Sinopsis varchar(256),
+Sinopsis VARCHAR(256),
+owner_email VARCHAR(255) NOT NULL,
 PRIMARY KEY(id_curso)
 )ENGINE=INNODB;
 
 CREATE TABLE registroCursos(
 email VARCHAR(255) NOT NULL,
 curso INT NOT NULL
+)ENGINE=INNODB;
+
+CREATE TABLE cursoTracking(
+SCOInstanceID INT UNSIGNED NOT NULL AUTO_INCREMENT DEFAULT '0',
+varName VARCHAR(255),
+varValue TEXT
 )ENGINE=INNODB;
