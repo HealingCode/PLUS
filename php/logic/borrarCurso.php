@@ -33,5 +33,10 @@ $manipul -> delete_file($ZIP);
 
 $sqlCurso -> deleteCurso($curso);
 
+/*
+Ahora borramos la gente inscrita a este curso (pero no su progreso en ellos)
+*/
+
+$sqlCurso -> deleteInscritosCursos($curso)
 
  ?>
