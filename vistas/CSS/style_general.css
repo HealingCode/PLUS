@@ -1,5 +1,7 @@
 body{
-  margin: 0px;
+  color: #797979;
+background: #ffffff;
+font-family: 'Open Sans', sans-serif;
 }
 
 HEADER{
@@ -20,7 +22,7 @@ HEADER img{
 }
 
 FOOTER{
-  padding: 10px;
+  padding: 1px;
   width: 100%;
   height: auto;
   clear: both;

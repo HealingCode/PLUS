@@ -106,6 +106,12 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
   <video  class="fm-video   " data-setup="{}" controls id="fm-video">
     <source src="vistas/recursos/clase.mp4" type="video/mp4">
   </video>
+  <script>
+    var reproductor = videojs('fm-video',{
+      fluid: true
+
+    })
+  </script>
 </div>
 
 
@@ -119,12 +125,7 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
 
 
 </div>
-<script>
-  var reproductor = videojs('fm-video',{
-    fluid: true
 
-  })
-</script>
 </body>
 
 </html>
