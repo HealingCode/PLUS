@@ -72,11 +72,11 @@ if($SCOdatos != null){
 $tituloCurso = $SCOdatos["nombre"];
 $version = $SCOdatos["version"];
 $launchDir = $SCOdatos["launcher"];
-
+$fullpath="../../cursos/SCORM/". $version.'/' . $tituloCurso.'/'.$launchDir;
 mkdir("../../cursos/SCORM/". $version.'/' . $tituloCurso.'/');
 $zip -> extractTo("../../cursos/SCORM/". $version. '/'. $tituloCurso);
 $zip -> close();
-$sqlCurso -> insertCurso($tituloCurso,$version,$launchDir,$dirToUpload,$Sinopsis,$owner );
+$sqlCurso -> insertCurso($tituloCurso,$version,$fullpath,$dirToUpload,$Sinopsis,$owner );
 
 //BORRAR LOS ARCHIVOS
 
