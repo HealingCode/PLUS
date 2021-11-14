@@ -22,7 +22,7 @@ $sqlCursos = new sqlCurso();
       <div id="inicioBoton">
         <a href = "../../../index.php"><img src = '../../vistas/recursos/Logo.png'></a>
       </div>
-
+      <b onclick=" location.href='/vistas/perfil_Usuario.php' ">Perfil de Usuario</b>
     </HEADER>
     <div class = "cuerpo">
       <div class ="flex-container">

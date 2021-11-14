@@ -11,15 +11,27 @@ height: 50vh;
 
 .pieTitular{
   width: auto;
-  height: 5vh;
-  background-color: gray;
+  height: 2vh;
+  background-color: black;
   text-align: center;
 }
 
 .flex-container{
+  width: auto;
   display: flex;
+  float: left;
 }
+
 
 .flex-container > div{
 
+}
+
+.editador{
+
+}
+
+
+.borrador{
+  
 }

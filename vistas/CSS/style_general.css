@@ -7,7 +7,7 @@ font-family: 'Open Sans', sans-serif;
 
 HEADER{
   width: auto;
-  height: 10vh;
+  height: 5vh;
   background-color: #084B8A;
   color: black;
   position: -webkit-sticky; /* Safari navegador, para que sirva en IOs */
@@ -81,11 +81,10 @@ cursor: pointer;
 }
 
 .cuerpo{
-width: auto;
+width: 100%;
 height: 100%;
-background-color: black;
+background-color: gray;
 color: white;
-padding-left: 20vw;
 padding-top: 4vh;
 }
 
