@@ -15,15 +15,8 @@
 <link rel="stylesheet" type="text/css" href="../../vistas/CSS/my.css">
 </head>
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
+
 <body>
-
-
-    <HEADER>
-          <div id="inicioBoton">
-            <a href = "../../../index.php"><img src = '../../vistas/recursos/Logo.png'></a>
-          </div>
-    </HEADER>
-  
   <div class="modal-dialog text-center">
     <div class="col-sm-8 main-section">
       <div class="modal-content">
