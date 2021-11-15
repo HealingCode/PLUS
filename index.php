@@ -81,17 +81,17 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
     <div class="carousel-item active">
       <img src="vistas/recursos/Estudiando1.jpg">
 
-      <div class="centrado">Cursos<BR>Personalizados<BR>Por<BR>Ti</div>
+      <div class="centrado">Cursos<BR>Para<BR>Ti</div>
 
 
     </div>
     <div class="carousel-item">
       <img src="vistas/recursos/Libros1.jpg" >
-      <div class="texto-encima">Texto</div>
+      <div class="texto-encima">...</div>
     </div>
     <div class="carousel-item">
       <img src="vistas/recursos/Salon1.jpg">
-      <div class="texto-encima">Texto</div>
+      <div class="texto-encima">...</div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
