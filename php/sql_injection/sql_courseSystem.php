@@ -147,8 +147,7 @@ $conexion = conecta();
     $cursos = $this -> selectCursosByOwner($idUser);
 
     while($row=mysqli_fetch_array($cursos)){
-      echo '<b class = "borrador" onclick= "borrarCurso(\''.$row['id_curso'].'\')">Borrar</b>';
-      echo '<b class = "editador" onclick= "editarCurso()">Editar</b>';
+
       echo '<a href="../../vistas\paginaCurso.php?id='.$row['id_curso'].'">';
       echo '<div class ="curso">';
       echo '<div class="elemento">';
@@ -159,6 +158,10 @@ $conexion = conecta();
       echo '</div>';
       echo '</div>';
       echo '</a>';
+      echo '<div class=botones>';
+      echo '<b class = "borrador" onclick= "borrarCurso(\''.$row['id_curso'].'\')">Borrar</b>';
+      echo '<b class = "editador" onclick= "editarCurso()">Editar</b>';
+      echo '</div>';
 
       /*
         Impresion de botones que borran y editan haciendo llamada AJAX

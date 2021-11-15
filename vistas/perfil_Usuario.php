@@ -23,11 +23,13 @@ $veri -> verify_loginSession();*/
 <link rel="stylesheet" type="text/css" href="../../vistas/CSS/cursos_style.css">
 <meta name = "viewport" content="user-scalable=0, width=device-width, initial-scale=1" >
 <body>
+<div class=botones>
+  <button onclick="location.href='../../index.php' "class="btn btn-outline-danger">Home</button>
+  <button onclick="location.href='../../php/logic/logout.php'" class="btn btn-outline-danger">Logout</button>
+  <button onclick="location.href='../../vistas/adminCurso.php'" class="btn btn-outline-info" name="admicur"  >Administrar tus cursos</button>
+  <button onclick="location.href='../../php/forms/upload_curso.php'" class="btn btn-outline-success">Sube un curso</button>
 
-<button onclick="location.href='../../index.php' "class="btn btn-outline-danger">Home</button>
-<button onclick="location.href='../../php/logic/logout.php'" class="btn btn-outline-danger">Logout</button>
-<button onclick="location.href='../../vistas/adminCurso.php'" class="btn btn-outline-info" name="admicur"  >Administrar tus cursos</button>
-<button onclick="location.href='../../php/forms/upload_curso.php'" class="btn btn-outline-success">Sube un curso</button>
+</div>
 
   <div id = "cuerpo">
     <div id ='cabecera'>
@@ -38,10 +40,7 @@ $veri -> verify_loginSession();*/
     </div>
     <div id ='torso'>
       <div class="header">
-        <div class="botones">
-
-
-        </div>
+        
       <?php
       echo "<img class = \"avatar\" src = \" " . $foto . " \">";
       ?>

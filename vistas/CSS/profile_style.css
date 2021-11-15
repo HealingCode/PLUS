@@ -38,8 +38,8 @@ background-color: rgba(0, 0, 0, .5);
 color: #fff;
 cursor: pointer;
 }
-botones{
-  
+.botones{
+background-color: black;
 }
 
 @media (max-width: 750px) {

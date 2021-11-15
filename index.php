@@ -58,7 +58,7 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
 
 <div id="portada">
 
-<h1>PLATAFORMA LOGICA UNIVERSITARIA SUPERIOR</h1>
+
 
 </div>
 
@@ -101,20 +101,6 @@ $temp3 = "\"location.href='/php/logic/logout.php'\"";
       <span class="carousel-control-next-icon"></span>
     </a>
 </div>
-<div class="container">
-  <h2> CLASES DISPONIBLES </h2>
-  <video  class="fm-video   " data-setup="{}" controls id="fm-video">
-    <source src="vistas/recursos/clase.mp4" type="video/mp4">
-  </video>
-  <script>
-    var reproductor = videojs('fm-video',{
-      fluid: true
-
-    })
-  </script>
-</div>
-
-
 
 <footer>
     <p> Plataforma Lógica Universitaria Superior tiene como objetivo primordial el aprendizaje.</p>

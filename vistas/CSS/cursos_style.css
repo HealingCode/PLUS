@@ -1,37 +1,32 @@
 .curso{
 margin: 2em;
 width: 15vw;
-height: 50vh;
+height: auto;
 }
 
 .elemento{
-  width: 15vw;
-  height: 50vh;
+  width: auto;
+  height: auto;
 }
 
 .pieTitular{
   width: auto;
   height: 2vh;
   background-color: black;
-  text-align: center;
+
 }
 
 .flex-container{
-  width: auto;
   display: flex;
-  float: left;
+flex-wrap: wrap;
 }
 
 
-.flex-container > div{
-
-}
-
-.editador{
-
-}
-
-
-.borrador{
-  
+.flex-container > b{
+  border: 0;
+  border-radius: 8px;
+  padding: 1px 25px;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  cursor: pointer;
 }
