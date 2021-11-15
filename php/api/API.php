@@ -1,29 +1,33 @@
 <?php
+//require "subs.php";
+include_once $_SERVER['DOCUMENT_ROOT'].'\php\api\subs.php';
 
+$SCOInstanceID = $_REQUEST['SCOInstanceID'] * 1;
 
+$initializeCache = initializeSCO($SCOInstanceID);
 ?>
 
 <html>
-
+<head>
 <script language="javascript">
 
 //----------------------------------------
 // BANDERAS ~ Para saber si comenzo o termino la comunicacion
 //----------------------------------------
-var bandIniciado = false;
-var bandFinalizado = false;
-
+var flagFinished = false;
+var flagInitialized = false;
+<?php print $initializeCache; ?>
 //----------------------------------------
 // API en javascript ~ Métodos de comunicacion
 //----------------------------------------
 
 function LMSInitialize(cadena){ // el parametro cadena se necesita por convencion, pero no se usa
 
-if((bandIniciado) || (bandFinalizado)){ //Si son verdad ambos (empezo y termino por convencion no inicia[Ya acabo])
+if((flagInitialized) || (flagFinished)){ //Si son verdad ambos (empezo y termino por convencion no inicia[Ya acabo])
   return "false";
 }
 
-bandIniciado = true;
+flagInitialized = true;
 return "true";
 }
 
@@ -41,7 +45,7 @@ function LMSFinish(cadena){
   	var d = new Date();
 
   	// set up request parameters - uses GET method
-  	req.open('GET','../../php/api/finish.php?SCOInstanceID=<?php print $SCOInstanceID; ?>&code='+d.getTime(),false);
+  	req.open('GET','../../php/api/finish.php?SCOInstanceID=<?php echo $SCOInstanceID; ?>&code='+d.getTime(),false);
 
   	// submit to the server for processing
   	req.send(null);
@@ -59,14 +63,14 @@ function LMSFinish(cadena){
   	return "true";
 }
 
-function LMSGetValue(){
+function LMSGetValue(varname){
   if ((! flagInitialized) || (flagFinished)) { return "false"; }
 
 
   	return cache[varname];
 }
 
-function LMSSetValue(){
+function LMSSetValue(varname,varvalue){
   if ((! flagInitialized) || (flagFinished)) { return "false"; }
 
   	// otherwise, set the requested data, and return success value
@@ -74,7 +78,7 @@ function LMSSetValue(){
   	return "true";
 }
 
-function LMSCommit(){
+function LMSCommit(string){
 
   if ((! flagInitialized) || (flagFinished)) { return "false"; }
 
@@ -89,7 +93,7 @@ function LMSCommit(){
 
   	// create a POST-formatted list of cached data elements
   	// include only SCO-writeable data elements
-  	var params = 'SCOInstanceID=<?php print $SCOInstanceID; ?>&code='+d.getTime();
+  	var params = 'SCOInstanceID=<?php echo $SCOInstanceID; ?>&code='+d.getTime();
   	params += "&data[cmi.core.lesson_location]="+urlencode(cache['cmi.core.lesson_location']);
   	params += "&data[cmi.core.lesson_status]="+urlencode(cache['cmi.core.lesson_status']);
   	params += "&data[cmi.core.exit]="+urlencode(cache['cmi.core.exit']);
@@ -120,15 +124,15 @@ function LMSCommit(){
 }
 
 function LMSGetLastError(){
-
+  return 0;
 }
 
 function LMSGetErrorString(){
-
+  return "error string";
 }
 
 function LMSGetDiagnostic(){
-
+  return "diagnostic string";
 }
 
 function createRequest() {
@@ -247,4 +251,10 @@ function urlencode( str ) {
 }
 
 </script>
+</head>
+<body>
+
+<p>&nbsp;
+
+</body>
 </html>

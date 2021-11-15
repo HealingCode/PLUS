@@ -119,7 +119,7 @@ $conexion = conecta();
     /*
     ~~ Impresion de los cursos ~~
     */
-    echo '<a href="../../php/api/rte.php?launchpage='.$row['launch_dir'].'&SCOInstanceID='.$idUser.'">';
+    echo '<a href="../../php/logic/handlerRTE.php?launchpage='.$row['launch_dir'].'&SCOInstanceID='.$idUser.'">';
     echo '<div class ="curso">';
 
     echo '<div class="elemento">';

@@ -70,6 +70,7 @@ if($SCOdatos != null){
 
 //CHECHA QUE SI ESTEN LOS DATOS NECESARIOS, SI NO, DEVUELVE UN ERROR
 $tituloCurso = $SCOdatos["nombre"];
+$tituloCurso = str_replace(" ", "", $tituloCurso);
 $version = $SCOdatos["version"];
 $launchDir = $SCOdatos["launcher"];
 $fullpath="../../cursos/SCORM/". $version.'/' . $tituloCurso.'/'.$launchDir;
